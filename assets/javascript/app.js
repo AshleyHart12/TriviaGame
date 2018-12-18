@@ -1,4 +1,3 @@
-$(document).ready(function() {
 
 // Questions
 
@@ -33,26 +32,31 @@ $(document).ready(function() {
         correctAnswer: [3],
     }]
 
-    var number = 60;
-var intervalId;
+$(document).ready(function() {
+var secondsLeft = 60;
 
-startGame = $("#startGame").on("click", function() {
-    $("#questionBox").text(questions);
-    
+function startTimer() {
+    if (secondsLeft === 0) {
+        alert("Game Over!");
+    }
+    else {
+        secondsLeft--;
+        setTimeout(startTimer, 1000);
+        $("#timer").text("Time Remaining: " + secondsLeft);
+        console.log(secondsLeft);
+    }
+ } 
 
-function run() {
-    intervalId = setInterval(decrement, 1000);
-}
+ $("#startGame").on("click", function () {
+     startTimer();
+     appendQuestions();
+ })
+
+ function appendQuestions() {
+    for (var i =0; i <= questions.length; i++) {
+       $("#questionBox").text("test"); 
+    }
+ }
 
 
-function decrement() {
-    number--;
-    $("#timer").text(number);
-}
-
-run();
-
-    console.log(questions)
-
-});
 })
