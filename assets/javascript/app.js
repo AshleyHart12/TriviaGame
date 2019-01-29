@@ -6,7 +6,7 @@
         $("#results").hide();
 
         // Set the amount of time at the beginning of the timer
-        var secondsLeft = 5;
+        var secondsLeft = 45;
         
         // Build Timer Function
         function startTimer() {
@@ -25,9 +25,7 @@
             
             }
                     
-            
-          
-        
+                  
          // Press Start button, show & start timer countdown, show all questions, hide instructions
          $("#startGame").on("click", function () {
         startTimer();
