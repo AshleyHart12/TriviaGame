@@ -1,6 +1,6 @@
 # TriviaGame
 Simple multiple choice trivia game- You'll have :60 to answer all questions. Good luck!
-https://ashleyhart12.github.io/Giphy-fied/
+
 
 **Technologies Used**
 - HTML
